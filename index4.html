@@ -58,4 +58,23 @@
         </ul>
     </div>
 
-  
+    <div id="planetInfo" class="planet-info" style="display: none;">
+        <!-- Aquí se mostrará la información del planeta seleccionado -->
+    </div>
+
+    <script>
+        function showPlanetInfo(planet) {
+            var planetInfo = document.getElementById('planetInfo');
+            planetInfo.style.display = 'block';
+
+            // Carga el contenido del archivo HTML del planeta seleccionado en el contenedor de información
+            planetInfo.innerHTML = '';
+            fetch('planetas/' + planet.toLowerCase() + '.html')
+                .then(response => response.text())
+                .then(data => {
+                    planetInfo.innerHTML = data;
+                });
+        }
+    </script>
+</body>
+</html>
