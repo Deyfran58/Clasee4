@@ -263,7 +263,7 @@ body {
 
 .menu ul li {
     margin-bottom: 5px;
-}
+}s
 
 .menu ul li a {
     text-decoration: none;
@@ -289,30 +289,3 @@ body {
     max-width: 100%;
     height: auto;
 }
-.menu {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 10px;
-}
-
-.menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.menu ul li {
-    margin-bottom: 5px;
-}
-
-.menu ul li a {
-    text-decoration: none;
-    color: black;
-}
-
-.menu ul li a:hover {
-    color: blue;
-}
-
