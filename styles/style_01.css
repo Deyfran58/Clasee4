@@ -1,0 +1,35 @@
+:root{
+    --rojo:rgb(222, 12, 12);
+
+    --linea:1px solid var(--rojo);
+}
+h2{
+    border: var(--linea);
+    color: var(--rojo);
+
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    width: 50%;
+
+    transition: all 3s;
+    text-align: center;
+}
+
+h2.rotar:hover{ transform:rotate(360deg);}
+
+h2.trasla:hover{transform: translate(10px,25px);}
+
+h2.torcer:hover{transform: skewX(50deg);}
+
+h2.escalar:hover{transform: scale(3);}
+
+h2.rotarx:hover{transform: rotatex(180deg);}
+
+h2.rotary:hover{transform: rotatey(180deg);}
+
+h2.multi:hover{transform: rotate(-180deg)
+    scale(2)
+    skew(20deg,20deg)
+    rotatex(360deg);}
+

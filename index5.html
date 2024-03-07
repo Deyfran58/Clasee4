@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="styles/style_05.css">
+
+    <script>
+        var pun1 = 0, pun2 = 0, pun3 = 0;
+
+        function ini(){
+            document.getElementById('pun1').innerText = pun1;
+            document.getElementById('pun2').innerText = pun2;
+            document.getElementById('pun3').innerText = pun3;
+        }
+
+        function destruir(valor){
+            switch(valor){
+                case 1:
+                    document.getElementById('av1').src = 'imgs/demo_04/explosion.gif';
+                    setTimeout(function(){
+                        document.getElementById('av1').src ='imgs/demo_04/avion01.gif'
+                    },1000);
+                    document.getElementById('pun1').innerText = ++pun1;
+                    break;
+
+                    case 2:
+                    document.getElementById('av2').src = 'imgs/demo_04/explosion.gif';
+                    setTimeout(function(){
+                        document.getElementById('av2').src ='imgs/demo_04/avion02.gif'
+                    },1200);
+                    document.getElementById('pun2').innerText = ++pun2;
+                    break;
+
+                    case 3:
+                    document.getElementById('av3').src = 'imgs/demo_04/explosion.gif';
+                    setTimeout(function(){
+                        document.getElementById('av3').src ='imgs/demo_04/avion03.gif'
+                    },800);
+                    document.getElementById('pun3').innerText = ++pun3;
+                    break;
+                    
+            }
+        }
+    </script>
+
+    <title>Transformaciones 5</title>
+</head>
+<body onload="ini()">
+    <img id="av1" src="imgs/demo_04/avion01.gif" alt="" class="actVolar1" onclick="destruir(1)">
+    <img id="av2" src="imgs/demo_04/avion02.gif" alt="" class="actVolar2" onclick="destruir(2)">
+    <img id="av3" src="imgs/demo_04/avion03.gif" alt="" class="actVolar3" onclick="destruir(3)">
+
+    <div class="marcador">
+        <table>
+            <caption><h2>Puntuación</h2></caption>
+            <tr>
+                <td><h3>Hunter</h3></td><td style="text-align:right"><p id="pun1"></p></td>
+            </tr>
+            <tr>
+                <td><h3>B-52</h3></td><td style="text-align:right"><p id="pun2"></p></td>
+            </tr>
+            <tr>
+                <td><h3>Mig</h3></td><td style="text-align:right"><p id="pun3"></p></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
