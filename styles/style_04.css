@@ -99,6 +99,31 @@ body {
     border-radius: 15px;
 }
 
+
+.luna{
+    margin-left: -70px;
+    margin-top: -70px;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    width: 45px;
+    height: 45px;
+    border: 2px solid white;
+    border-radius: 85px;
+    animation: rotar 10s linear 0s infinite;
+}
+
+.pla_luna img{
+    margin-left: 1px;
+    margin-top: 1px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
 .marte {
     margin-left: -58px;
     margin-top: -58px;
@@ -212,38 +237,6 @@ body {
     border: 2px solid #00008B;
     background-color: #00008B;
     border-radius: 40px;
-}
-
-.luna {
-    width: 30px;
-    height: 30px;
-    background-color: gray;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform-origin: 50% 150%;
-    animation: orbit 10s linear infinite, rotateMoon 5s linear infinite;
-}
-
-@keyframes orbit {
-    from {
-        transform: rotate(0deg) translateX(100px) rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg) translateX(100px) rotate(-360deg);
-    }
-}
-
-@keyframes rotateMoon {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
 }
 
 
